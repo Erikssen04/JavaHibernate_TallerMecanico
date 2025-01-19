@@ -11,4 +11,7 @@ public interface VentaDAO {
     List<Venta> findAllVentas();
     void updateVenta(Venta venta);
     void deleteVenta(int venta_id);
+
+    // Métodos para consultas avanzadas
+    double ingresosVentasByMes(int mes, int anio);
 }

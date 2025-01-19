@@ -11,13 +11,6 @@ public class HibernateUtil {
     // Bloque estático para inicializar la SessionFactory solo una vez.
     static {
         try {
-            // Se configura Hibernate con el archivo de configuración hibernate.cfg.xml.
-            /*sessionFactory = new Configuration().configure("hibernate.cfg.xml").addAnnotatedClass(com.iesvdc.models.Profesor.class)
-                    .addAnnotatedClass(com.iesvdc.models.Asignatura.class)
-                    .addAnnotatedClass(com.iesvdc.models.Grupo.class)
-                    .addAnnotatedClass(com.iesvdc.models.Alumno.class)
-                    .addAnnotatedClass(com.iesvdc.models.Tutor.class)
-                    .buildSessionFactory();*/
             sessionFactory = new Configuration().configure("hibernate.cfg.xml").buildSessionFactory();
         } catch (Exception e) {
             System.err.println("Error al crear la SessionFactory: " + e.getMessage());

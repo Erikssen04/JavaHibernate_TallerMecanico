@@ -11,4 +11,7 @@ public interface ReparacionDAO {
     List<Reparacion> findAllReparaciones();
     void updateReparacion(Reparacion reparacion);
     void deleteReparacion(int reparacion_id);
+
+    // Métodos para consultas avanzadas
+    List<Reparacion> reparacionesRealizadasByMecanico(int idMecanico);
 }
